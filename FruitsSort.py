@@ -24,7 +24,7 @@ def heuristic(state, goal_state):
     for i in range(len(state)):
         for j in range(len(state[i])):
             goal_i, goal_j = next((x, y) for x in range(len(goal_state)) for y in range(len(goal_state[x])) if goal_state[x][y].type == state[i][j].type and goal_state[x][y].size == state[i][j].size)
-            total_distance += abs(i - goal_i) + abs(j - goal_j)
+            total_distance += abs(i - goal_i) + abs(j - goal_j) # Manhattan distance calculated
     return total_distance
 
 # Define a function to get the neighboring swapped states
